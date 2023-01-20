@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h3>Makaleler</h3>
+{% if articles %}
+<div style="display: flex; justify-content: flex-end;">
+  <form action="/search" method="post">
+  <input type="text" name="keyword" class="input-sm" maxlength="64" placeholder="Ara">
+  <button type="submit" class="btn btn-primary">Ara</button>
+  </form>
+</div>
+<hr>
+<ul class="list-group">
+  {% for article in articles %}
+    <li class="list-group-item"><a href="/article/{{article.id}}">{{article["title"]}}</a></li>
+  
+  {% endfor %}
+</ul>
+<hr>
+
+{% else %}
+<div class="alert alert-danger">Henüz bir makaleniz bulunmuyor.</div>
+{% endif %}
+
+{% endblock main %}

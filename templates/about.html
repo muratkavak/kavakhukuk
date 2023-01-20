@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<div class="container">
+    {% include "includes/messages.html" %}
+        
+    <div class="jumbotron text-center"> 
+        <h3>Hakkımızda</h3>
+    </div>
+    <hr>
+
+    <div style="display: flex;">
+    <div style="flex: 2;">
+        <h1>Hakkımızda Deneme</h1>
+        <p>Yazı burada</p>
+    </div>
+    <div style="flex: 1;">
+        <img src="https://ichef.bbci.co.uk/images/ic/976x549_b/p00q832j.jpg" alt="image" width="500" height="500">
+    </div>
+    </div>
+    <hr>
+    <div style="display: flex;">
+    <div style="flex: 1; margin-right: 20px;">
+        <img src="https://ichef.bbci.co.uk/images/ic/976x549_b/p00q834n.jpg" alt="image" width="500" height="500">
+    </div>
+    <div style="flex: 2;">
+        <h1>Deneme Yazı</h1>
+        <p>Yazı burada</p>
+    </div>
+    </div>
+</div>
+
+{% endblock main %} 
